@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.body {
+    /* 切り替え前の画像と切り替え後の画像を設定 */
+    background-image: url(../../public/bookshelf.jpg), url(../../public/bookshelf.jpg); 
+    /* アニメーションを設定 */
+    animation: image_anime 1s ease; 
+    /* forwardsを設定すると100%の状態で止まる */
+    animation-fill-mode: forwards; 
+    /* animationを開始する時間を設定 */
+    animation-delay: 2s; 
+}
+
+@keyframes image_anime {
+    100% {
+        /* 切り替え後の画像 */
+        background-image: url(../../public/bookshelf.jpg); 
+    }
+}
+
+.fade_in{
+  opacity: 0;
+  animation-name: fade_in;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade_in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

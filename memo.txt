@@ -1,0 +1,18 @@
+起動コマンド
+./vendor/bin/sail up -d
+
+終了コマンド
+./vendor/bin/sail stop
+
+プロジェクト作成コマンド
+curl -s "<https://laravel.build/example-app>" | bash
+
+※example-appのところを変えるとそのプロジェクト名になる。
+
+
+
+Vite manifest not found at: /var/www/html/public/build/manifest.json
+GET localhost
+※VITEが起動していないのが原因
+
+./vendor/bin/sail npm run dev
