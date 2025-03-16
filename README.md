@@ -1,66 +1,53 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# バーチャル図書館
+実際に図書館へ訪れるわくわくを  
+自分と相性の良い本との出会いを  
+  
+# 環境
+PHP 8.4  
+Laravel 12.0.1  
+vue 3.2.37  
+MySQL  
+Docker Laravel Sail  
+Ubuntu  
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# 背景
+進む読書離れに歯止めをかけるべく、誰でも手軽に本に出合えることをコンセプトにしようと考えました。
+図書館によく行く人たちは「そこでたまたま出会えた本を読むのが好き」ということを言います。
+このバーチャル図書館では、ランダムであらすじを表示する機能を付けることによって偶然感を演出し、
+出会えた本にわくわくするよう工夫を加えました。
 
-## About Laravel
+# 機能
+- ユーザー新規登録機能
+- ログイン、ログアウト機能
+- 書籍登録、一覧表示、詳細表示、更新、削除機能
+- お気に入り登録（非同期処理）
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# スクリーンショット
+- トップページ  
+![welcom](https://github.com/user-attachments/assets/f642cf33-2459-4a05-8190-0eb2d469a986)  
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- 一覧ページ  
+![index](https://github.com/user-attachments/assets/4eab6fa1-63a1-4ebd-b5ed-eb1be9d01578)  
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- 詳細ページ  
+![show](https://github.com/user-attachments/assets/79266787-842c-48c9-a909-5e1cd665b568)  
 
-## Learning Laravel
+- 編集ページ  
+![update](https://github.com/user-attachments/assets/132ff5c8-f644-42c9-90fe-1ac1e87b76e1)  
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- 書籍登録ページ  
+![create](https://github.com/user-attachments/assets/5f3868ab-ae58-472c-b983-f830afb07dc8)  
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- あらすじランダム表示ページ  
+　あらすじをランダムに一つ表示、すでにお気に入りのあらすじは表示されないように調整  
+![random](https://github.com/user-attachments/assets/c9f64fca-2d6c-4139-a4c0-226741110eb0)  
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- お気に入り機能  
+　vueを用いた非同期処理のお気に入り登録機能を実装  
+![favoriteNon](https://github.com/user-attachments/assets/3a8eb6ba-771f-4824-8357-e24fb2d4a7bb)
+![favoriteYes](https://github.com/user-attachments/assets/fd55920f-0315-4879-97f6-8a51ca3a3fa5)  
 
-## Laravel Sponsors
+- お気に入り一覧  
+![favoriteShelf](https://github.com/user-attachments/assets/b3c5daa2-9192-40ed-902d-2c9ab889392b)  
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
